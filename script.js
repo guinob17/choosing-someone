@@ -1,9 +1,14 @@
 /*The code's goal is to discover how many mens with legal age and brown skin
 and how many womans with age between 25 and 30 years old were signed in on the system!*/
 let input = require('readline-sync')
-console.log('=========================')
-console.log(' *** CHOOSING PEOPLE *** ')
-console.log('=========================')
+header();
+
+//declaring procedure
+function header(){
+    console.log('=========================')
+    console.log(' *** CHOOSING PEOPLE *** ')
+    console.log('=========================')
+}
 
 //Variables
 let totalmen = 0
@@ -21,9 +26,11 @@ do{
     gender = Number(input.question(' '))
 
     console.clear()
+    header();
     age = Number(input.question('Type the age: '))
 
     console.clear()
+    header();
     console.log('Skin color: ')
     console.log('[1] Black')
     console.log('[2] Brown')
@@ -31,6 +38,8 @@ do{
     console.log('[4] Ginger')
     skin = Number(input.question(' '))
 
+    console.clear()
+    header();
     console.log('would you like to sign in someone more?')
     login = String(input.question('[Y]Yes / [N]No '))
 
@@ -50,8 +59,7 @@ do{
 
 //End of the code
 console.clear()
-console.log('=========================')
-console.log(' *** CHOOSING PEOPLE *** ')
+header();
 console.log(`Total mens with legal age and brown skin is ${totalmen}!`)
 console.log(`Total womans with age between 25 and 30 years old and blond skin is ${totalwoman}!`)
 console.log('=========================')
